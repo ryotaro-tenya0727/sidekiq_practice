@@ -1,0 +1,7 @@
+<h1>Message#new</h1>
+<p>Find me in app/views/message/new.html.erb</p>
+<%= form_with(model: @message, local: true) do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <%= f.submit%>
+<% end %>
