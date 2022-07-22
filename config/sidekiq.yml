@@ -2,7 +2,7 @@
 :pidfile: ./tmp/pids/sidekiq.pid
 :logfile: ./log/sidekiq.log
 production:
-  :concurrency: 20
+  :concurrency: 5
 :queues:
   - default
 :daemon: true
