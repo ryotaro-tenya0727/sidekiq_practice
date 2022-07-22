@@ -229,7 +229,7 @@ DEPENDENCIES
   redis (~> 4.7, >= 4.7.1)
   sass-rails (>= 6)
   selenium-webdriver
-  sidekiq
+  sidekiq (~> 6.5, >= 6.5.1)
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
