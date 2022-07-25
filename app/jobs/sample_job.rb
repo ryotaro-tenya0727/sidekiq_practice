@@ -1,5 +1,5 @@
 class SampleJob < ApplicationJob
-  queue_as :default
+  queue_as :honi
 
   def perform(*args)
       Message.find_each do |message|
