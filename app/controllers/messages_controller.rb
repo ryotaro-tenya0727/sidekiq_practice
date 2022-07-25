@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.save!
-    SampleJob.perform_later
+    SampleJob.set(wait: 1.minutes).perform_later(@message.body)
   end
 
   private
