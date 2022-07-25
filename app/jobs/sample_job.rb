@@ -1,9 +1,8 @@
 class SampleJob < ApplicationJob
-  queue_as :honi
+  queue_as :mailers
 
-  def perform(*args)
-      Message.find_each do |message|
-      message.update(sidekiq_executed_time: DateTime.current)
-    end
+  def perform(id)
+    message = Message.find(id)
+    MessageMailer.message_email(message)
   end
 end
