@@ -3,6 +3,6 @@ class SampleJob < ApplicationJob
 
   def perform(id)
     message = Message.find(id)
-    MessageMailer.message_email(message)
+    MessageMailer.message_email(message).deliver_later
   end
 end
