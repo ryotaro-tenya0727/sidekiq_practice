@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
+    @message = current_user.messages.build(message_params)
     @message.save!
     MessageMailer.message_email(@message, current_user.email).deliver_later(wait: 30.seconds)
   end
