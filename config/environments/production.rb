@@ -11,7 +11,7 @@ Rails.application.configure do
   :address        => ENV['MAILGUN_SMTP_SERVER'],
   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-  :domain         => 'https://sidekiqpractice.herokuapp.com/',
+  :domain         => 'https://sidekiqpractice.herokuapp.com',
   :authentication => :plain,
   :enable_starttls_auto => true,
   :open_timeout => 5,
