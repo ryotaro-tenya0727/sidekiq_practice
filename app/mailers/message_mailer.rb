@@ -1,5 +1,5 @@
 class MessageMailer < ApplicationMailer
-  default from: "from@example.com"
+  default from: 'from@example.com'
 
   def message_email(message, email)
     @message = message
