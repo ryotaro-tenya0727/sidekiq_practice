@@ -1,7 +1,10 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
-  root to: 'messages#new'
+  root to: 'user_sessions#new'
   resources :messages
+  resources :users
+  get '/login', to: 'user_sessions#new'
+  post '/login', to: 'user_sessions#create'
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
