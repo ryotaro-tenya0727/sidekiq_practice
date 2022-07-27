@@ -3,6 +3,6 @@ class MessageMailer < ApplicationMailer
 
   def message_email(message, email)
     @message = message
-    mail(to: "#{email}", subject: "#{message.body}を入力した")
+    mail(to: email.to_s, subject: "#{message.body}を入力した")
   end
 end
