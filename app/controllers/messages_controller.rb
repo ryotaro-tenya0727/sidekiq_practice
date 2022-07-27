@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+  before_action :require_login
   def new
     @message = Message.new
   end

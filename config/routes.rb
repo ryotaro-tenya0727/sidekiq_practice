@@ -1,6 +1,6 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
-  root to: 'user_sessions#new'
+  root to: 'messages#new'
   resources :messages
   resources :users
   get '/login', to: 'user_sessions#new'
