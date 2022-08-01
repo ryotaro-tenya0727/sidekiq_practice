@@ -1,9 +1,7 @@
 <h1>ユーザー登録</h1>
   <%= form_with(model: @user, local: true) do |f| %>
-    <div class="form-group">
       <%= f.label :email ,"Email" %>
       <%= f.email_field :email %>
-    </div>
     <div>
       <%= f.label :password,"Password" %>
       <%= f.password_field :password%>
