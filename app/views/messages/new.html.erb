@@ -1,7 +1,10 @@
-<h1>Message#new</h1>
-<p>Find me in app/views/message/new.html.erb</p>
+<h1>指定した時間にメールがくる</h1>
 <%= form_with(model: @message, local: true) do |f| %>
-  <%= f.label :body %>
+  <%= f.label :body, "文章" %>
   <%= f.text_field :body %>
+    <br>
+  <%= f.label :time, "時間" %>
+  <%= f.datetime_field :executed_time %>
+    <br>
   <%= f.submit%>
 <% end %>
