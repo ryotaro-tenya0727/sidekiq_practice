@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :users
   get '/login', to: 'user_sessions#new'
   post '/login', to: 'user_sessions#create'
+  delete '/logout', to: 'user_sessions#destroy'
+  post '/callback', to: 'user_sessions#callback'
   # get '/oauth2callback', to: 'user_sessions#new'
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

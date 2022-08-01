@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.5'
 gem 'sidekiq', '~> 6.4'
 gem 'sorcery'
+gem 'googleauth', '~> 1.2'
+gem 'dotenv-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
