@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_08_01_103305) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
-    t.time "executed_time"
+    t.datetime "executed_time"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
